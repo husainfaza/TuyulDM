@@ -1,0 +1,9 @@
+{
+  "name": "com.tuyuldm.daemon",
+  "description": "TuyulDM Native Helper",
+  "path": "/absolute/path/to/your/native-host/tuyuldm-daemon",
+  "type": "stdio",
+  "allowed_origins": [
+    "chrome-extension://PASTE_YOUR_EXTENSION_ID_HERE/"
+  ]
+}

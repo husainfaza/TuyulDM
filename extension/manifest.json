@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "TuyulDM",
+  "description": "Invisible helpers for your downloads.",
+  "version": "0.1.0",
+  "permissions": ["nativeMessaging", "downloads", "webRequest", "storage", "scripting"],
+  "host_permissions": ["<all_urls>"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "index.html"
+  }
+}
