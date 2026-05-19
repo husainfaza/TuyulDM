@@ -6,3 +6,10 @@ coverage/
 *.log
 .env*
 !.env.example
+
+# Go build output
+native-host/tuyuldm-daemon
+native-host/tuyuldm-daemon.exe
+
+# Local-only rendered native-messaging manifests
+*.local.json

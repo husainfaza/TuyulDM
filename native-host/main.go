@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"io"
 	"os"
+	"path/filepath"
 )
 
 type Request struct {
@@ -24,7 +25,14 @@ func main() {
 	// Redirect logs to stderr
 	fmt.Fprintln(os.Stderr, "TuyulDM Native Host Started")
 
-	storage, err := NewStorage("tuyuldm.db")
+	dataDir, err := DataDir()
+	if err != nil {
+		fmt.Fprintln(os.Stderr, "Data dir error:", err)
+		return
+	}
+	fmt.Fprintln(os.Stderr, "Data dir:", dataDir)
+
+	storage, err := NewStorage(filepath.Join(dataDir, "tuyuldm.db"))
 	if err != nil {
 		fmt.Fprintln(os.Stderr, "Storage error:", err)
 		return

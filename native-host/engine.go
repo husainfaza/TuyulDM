@@ -294,7 +294,6 @@ func (e *Engine) downloadSegment(a *ActiveDownload, idx int) error {
 			return err
 		}
 	}
-	return nil
 }
 
 func (e *Engine) Pause(id string) {
